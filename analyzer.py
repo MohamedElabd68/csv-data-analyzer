@@ -30,3 +30,5 @@ if __name__ == "__main__":
     print(f"Average Sales: {average_sales(df)}")
     print(f"Max Sales: {max_sales(df)}")
     print(f"Min Sales: {min_sales(df)}")
+
+print("Running from Jenkins")
