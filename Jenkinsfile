@@ -4,25 +4,25 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                bat 'pip install -r requirements.txt'
+                sh 'pip install -r requirements.txt'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'pytest'
+                sh 'pytest'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                bat 'docker build -t csv-analyzer .'
+                sh 'docker build -t csv-analyzer .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                bat 'docker run --rm csv-analyzer'
+                sh 'docker run --rm csv-analyzer'
             }
         }
     }
